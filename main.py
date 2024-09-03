@@ -59,7 +59,31 @@ def closest_note(freq):
     
     # Trouver la note la plus proche
     closest_note_idx = np.argmin(np.abs(np.array(notes_freq) - freq))
-    return closest_note_idx
+    return notes_freq[closest_note_idx]
 
 # Trouver la note la plus proche pour chaque fréquence aléatoire
-closest_notes = [closest_note(f) for f in frequencies]
+closest_notes = [closest_note(Y) for Y in Y_magnitude]
+
+
+
+# Calcul de la transformée inverse de Fourier
+y2 = np.fft.ifft(closest_notes)
+
+# Affichage du signal original
+plt.figure(figsize=(12, 6))
+
+plt.subplot(2, 1, 1)
+plt.plot(t, y2)
+plt.title("Signal temporel composé de 50 fréquences aléatoires entre 200 et 500 Hz")
+plt.xlabel("Temps (s)")
+plt.ylabel("Amplitude")
+
+# Affichage du spectre de fréquences
+plt.subplot(2, 1, 2)
+plt.plot(freqs[:len(freqs) // 2], Y_magnitude[:len(freqs) // 2])
+plt.title("Transformée de Fourier (Magnitude)")
+plt.xlabel("Fréquence (Hz)")
+plt.ylabel("Amplitude")
+
+plt.tight_layout()
+plt.show()

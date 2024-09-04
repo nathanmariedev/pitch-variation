@@ -8,14 +8,15 @@ Prenons un exemple rapide : Un artiste doit chanter sur un morceau en gamme "C" 
 
 Voici l'ensemble de fréquences de la gamme "C" :
 
-Note	Fréquence (Hz)
-Do4	261.63
-Ré4	293.66
-Mi4	329.63
-Fa4	349.23
-Sol4	392.00
-La4	440.00
-Si4	493.88
+| Note  | Fréquence (Hz) |
+|-----|--------|
+| Do  | 261.63 |
+| Ré  | 293.66 |
+| Mi  | 329.63 |
+| Fa  | 349.23 |
+| Sol | 392.00 |
+| La  | 440.00 |
+| Si  | 493.88 |
 
 Si l'artiste chante une note de fréquence 285 hz, le correcteur de pitch va augmenter la fréquence de cette note afin de l'ajuster à la fréquence de la gamme la plus proche (ici Ré4).
 

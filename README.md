@@ -2,7 +2,7 @@
 
 La correction dynamique de fréquences est au coeur même du fonctionnement du plug-in AutoTune. Ce logiciel permet de conserver une certaine justesse, et donc d'éviter de chanter faux. Pour cela, le logiciel analyse la fréquence de la piste audio en temps réel et l'ajuste sur la note de la gamme la plus proche.
 
-Une `gamme` est définie par une `clé`, et désigne un `ensemble de fréquences` qui "sonnent correctement" entre elles.
+Une `gamme` est définie par une `clé`, et désigne un `ensemble de fréquences`(ou de notes) qui "sonnent correctement" entre elles.
 
 ## Objectif :
 

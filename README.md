@@ -4,23 +4,14 @@ La correction dynamique de fréquence est au coeur même du fonctionnement du pl
 
 Une `gamme` est défini par une `clé`, et désigne un `ensemble de fréquences` qui "sonnent correctement" entre elles.
 
-Prenons un exemple rapide : Un chanteur 
+## Objectif :
 
-Note	Fréquence (Hz)
-Do4	261.63
-Ré4	293.66
-Mi4	329.63
-Fa4	349.23
-Sol4	392.00
-La4	440.00
-Si4	493.88
+Votre objectif est de concevoir un programme permettant d'ajuster des fréquences relativement à une clé donnée, afin de simuler le fonctionnement d'un plug-in de correction automatique de pitch. Pour visualiser cela, `vous éditerez deux graphiques` (chacun comprenant une représentation du signal et de la répartition des fréquencess).
 
-``` pip install librosa ```
+Les fréquences sont stockées dans le tableau `frequencies`. Afin de simplifier la lisibilité du graphique, on génere notre onde sonore grace à une sélection de 50 fréquences aléatoirement choisies entre 200 et 500 hz.
 
+Afin de déterminer la répartition des fréquences à partir d'un signal, utilisez la transformée de Fourrier.
 
-SOLUTION : 
-Génerer liste de fréquences aléatoires entre 200 hz et 500 hz
-Afficher la sinusoidale grace a fourrier
+Il est également important d'identifier les fréquences dominantes d'un signal avant de le corriger (une fonction est fournie pour cela).
 
-Appliquer l'algo de correction
-Afficher la sinusoidale corrigée
+Bon courage ! (il en faudra)

@@ -31,26 +31,24 @@ keys = {
 np.random.seed(0)  # Pour reproductibilité
 frequencies = np.random.uniform(200, 500, num_frequencies)  # Fréquences aléatoires entre 200 et 500 Hz
 
-def generation_signal(frequences):
+def generation_signal(frequences:np.ndarray) -> tuple[np.ndarray,np.ndarray] :
     t = np.linspace(0, duration, int(sampling_rate * duration), endpoint=False) # TEMPS
     y = np.zeros_like(t) # SIGNAL
-
     for f in frequences:
         y += np.sin(2 * np.pi * f * t)
-
     return y, t
 
-def transfo_fourier(y, t, sampling_rate):
+def transfo_fourier(y:np.ndarray, t:np.ndarray, sampling_rate:int) -> tuple[np.ndarray,np.ndarray] :
     Y = np.abs(np.fft.fft(y))
     freqs = np.fft.fftfreq(len(Y), 1 / sampling_rate)
     return Y, freqs
 
-def freqs_dominantes(Y, freqs, num_frequencies):
+def freqs_dominantes(Y:np.ndarray, freqs:np.ndarray, num_frequencies:int) -> np.ndarray :
     indices = np.argsort(Y)[-num_frequencies:]  # Indices des fréquences dominantes
     dominant_freqs = np.abs(freqs[indices])  # Fréquences dominantes
     return dominant_freqs
 
-def plot_signal(y, t, freqs, Y):
+def plot_signal(y:np.ndarray, t:np.ndarray, freqs:np.ndarray, Y:np.ndarray) -> None:
     plt.figure(figsize=(12, 6))
 
     plt.subplot(2, 1, 1)
@@ -73,7 +71,7 @@ def plot_signal(y, t, freqs, Y):
 # A IMPLEMENTER
 
 # TODO: Prends une fréquence et une clé et retourne la note la plus proche
-def closest_note(freq, key):  
+def closest_note(freq:float, key:list[float]) -> float:  
     return 
 
 # TODO: Générer le signal normal

@@ -39,6 +39,9 @@ def generation_signal(frequences:np.ndarray) -> tuple[np.ndarray,np.ndarray] :
     return y, t
 
 def transfo_fourier(y:np.ndarray, t:np.ndarray, sampling_rate:int) -> tuple[np.ndarray,np.ndarray] :
+    """
+    La transformée de Fourier (FFT) est une opération mathématique qui permet de convertir un signal temporel en spectre fréquentiel
+    """
     Y = np.abs(np.fft.fft(y))
     freqs = np.fft.fftfreq(len(Y), 1 / sampling_rate)
     return Y, freqs

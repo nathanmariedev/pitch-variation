@@ -4,9 +4,9 @@ La correction dynamique de fréquences est au coeur même du fonctionnement du p
 
 Une `gamme` est définie par une `clé`, et désigne un `ensemble de fréquences`(ou de notes) qui "sonnent correctement" entre elles.
 
-Prenons un exemple rapide : Un artiste doit chanter sur un morceau en gamme "C" (Do). Ici, C est la clé de la gamme. 
+Prenons un exemple rapide : Un artiste doit chanter sur un morceau en gamme *Do*. Ici, *Do* est la clé de la gamme. 
 
-Voici l'ensemble de fréquences de la gamme "C" :
+Voici l'ensemble de fréquences de la gamme *Do* :
 
 | Note  | Fréquence (Hz) |
 |-----|--------|
@@ -18,7 +18,7 @@ Voici l'ensemble de fréquences de la gamme "C" :
 | La  | 440.00 |
 | Si  | 493.88 |
 
-Si l'artiste chante une note de fréquence 285 hz, le correcteur de pitch va augmenter la fréquence de cette note afin de l'ajuster à la fréquence de la gamme la plus proche (ici Ré4).
+Si l'artiste chante une note de fréquence 285 hz, le correcteur de pitch va augmenter la fréquence de cette note afin de l'ajuster à la fréquence de la gamme la plus proche (ici *Ré*).
 
 ## Objectif :
 

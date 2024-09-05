@@ -25,6 +25,7 @@ Si l'artiste chante une note de fréquence 285 hz, le correcteur de pitch va aug
 Votre objectif est de concevoir un programme permettant d'ajuster des fréquences relativement à une clé donnée, afin de simuler le fonctionnement d'un plug-in de correction automatique de pitch. Pour visualiser cela, `vous éditerez deux graphiques` (chacun comprenant une représentation du signal et de la répartition des fréquences).
 
 Les fréquences sont stockées dans le tableau `frequencies`. Afin de simplifier la lisibilité du graphique, on génere notre onde sonore grace à une sélection de 50 fréquences aléatoirement choisies entre 200 et 500 hz.
+Attention aux variables globales au début du code, qui ont leur importance.
 
 Afin de déterminer la répartition des fréquences à partir d'un signal, utilisez la transformée de Fourrier (si vous ne connaissez pas, google est votre ami).
 

@@ -8,7 +8,7 @@ sampling_rate = 5000  # Fréquence d'échantillonnage en Hz
 num_frequencies = 50  # Nombre de fréquences aléatoires
 
 keys = {
-    "C": [
+    "Do": [
         261.63,  # Do4
         293.66,  # Ré4
         329.63,  # Mi4
@@ -17,7 +17,7 @@ keys = {
         440.00,  # La4
         493.88,  # Si4
     ],
-    "D": [
+    "Ré": [
         293.66,  # Ré4
         329.63,  # Mi4
         349.23,  # Fa4
@@ -87,7 +87,7 @@ indices = np.argsort(Y)[-num_frequencies:]  # Indices des fréquences dominantes
 dominant_freqs = np.abs(freqs[indices])  # Fréquences dominantes
 
 # Remplacer les fréquences dominantes par les notes les plus proches de la gamme donnée
-mapped_freqs = [closest_note(f, keys["C"]) for f in dominant_freqs]
+mapped_freqs = [closest_note(f, keys["Do"]) for f in dominant_freqs]
 
 # Recomposer le signal avec les nouvelles fréquences
 y2, t = generation_signal(mapped_freqs)

@@ -10,7 +10,7 @@ Voici l'ensemble de fréquences de la gamme *Do* :
 
 | Note  | Fréquence (Hz) |
 |-----|--------|
-| Do  | 261.63 |
+| Do  | 261.63 | 
 | Ré  | 293.66 |
 | Mi  | 329.63 |
 | Fa  | 349.23 |
